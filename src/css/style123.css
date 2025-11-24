@@ -1,0 +1,461 @@
+body {      
+  width: 100vw;      
+  height: 100vh;      
+  padding: 1rem;      
+  background-image: url("https://res.cloudinary.com/dptprh0xk/image/upload/v1762733060/estilo-de-vida-fotorrealista-cassino_hny2za.jpg");      
+  background-size: cover;      
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  animation-name: background-glitch;
+  /*animation-duration: 5s; */
+  /*animation-iteration-count: infinite; */
+  /*animation-timing-function: steps(10); Efeito de falha/glitch */
+  display: flex;      
+  align-items: center;      
+  justify-content: center;      
+  font-size: 24px;      
+  font-family: monospace; /* Estilo de fonte gamer/tech */
+  overflow:hidden;      
+  top:0;    
+  touch-action: none;  
+  margin:0;
+}
+      
+:root{
+    --primeira-cor:#00f088;
+    --segunda-cor: #aaff00;
+    --tamanho: 100px;
+    --duracao: 4s;
+}
+
+selector{
+    overflow: hidden !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+selector:before{
+    content: '';
+    position: absolute;
+    width: var(--tamanho);
+    height: 140%;
+    background: linear-gradient(var(--primeira-cor), var(--segunda-cor));
+    animation: animate var(--duracao) linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 1200px) {      
+  body {      
+    background-image: url("https://res.cloudinary.com/dptprh0xk/image/upload/v1762733060/estilo-de-vida-fotorrealista-cassino_hny2za.jpg");      
+  }      
+}      
+
+/* Estilos para orientação paisagem (landscape) */
+@media screen and (orientation: landscape) {
+    /* adicione estilos específicos para quando a tela estiver na horizontal */
+}
+
+/* Estilos para orientação retrato (portrait) */
+@media screen and (orientation: portrait) {
+    /* adicione estilos específicos para quando a tela estiver na vertical */
+}
+
+
+
+
+
+#reels {      
+  display: flex;      
+  width: 100vw;      
+  height: calc((5 / 5) * 125vw);      
+  max-height: calc(100vh - 50px - 50px);      
+  max-width: calc((5 / 5) * (90vh - 50px - 40px));      
+  border:10px solid purple;    
+  animation: piscar 1s infinite alternate;    
+  background: trasnparent;
+    
+}      
+
+.reel {      
+  overflow: hidden;      
+  width: 20%;      
+  height: 100%;      
+  position: relative;      
+  border:1px solid orage;    
+  border-radius:8px;
+  animation: piscar1 1.5s infinite alternate;
+    
+}      
+
+.reel > .icons {      
+  position: relative;  
+  border:5px solid green;    
+}      
+
+.reel > .icons > img {      
+  margin:0;      
+  padding:0;      
+  transform: translate3d(0,0,0);      
+  width: 100%;      
+  height: 100%;            
+  object-fit: cover;      
+  border:2px solid  green;    
+  /* animation: piscar2 1.9s infinite alternate;    */
+  /* opacity: 0.2; /* 70% de transparência */ 
+}      
+ .icons img.win {
+   outline: 10px solid gold;
+   transform: scale(1.15);
+    } 
+
+#linesLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events:none ;
+  z-index: 9999;
+}
+
+.line-win {
+  position: absolute;
+  height: 6px;
+  background: rgba(255,255,0,0.9);
+  box-shadow: 0 0 10px gold;
+  border-radius: 3px;
+ 
+    
+}
+
+.line-vertical {
+  width: 6px;
+  height: 100%;
+  background: rgba(255,255,0,0.9);
+  position: absolute;
+  box-shadow: 0 0 10px gold;
+  border-radius: 3px;
+  
+    
+  
+}
+
+.line-diagonal {
+  width: calc(100% + 40px);
+  height: 6px;
+  background: rgba(255,255,0,0.9);
+  box-shadow: 0 0 10px gold;
+  border-radius: 3px;
+  position: absolute;
+  transform-origin: left center;
+}
+
+.line-window {
+  position: absolute;
+  border: 6px solid rgba(255,255,0,0.9);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px gold;
+}
+
+.line-window-big {
+  position: absolute;
+  border: 10px solid rgba(255,215,0,0.9);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px gold;
+}
+
+.line-full {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,0,0.15);
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px gold;
+}
+
+
+#controls {      
+  background: trasnparent;
+  width:100%;      
+  height: 130px;      
+  display: flex;   
+  border:1px solid gold;   
+  border-radius: 20px;
+  justify-content: space-between;      
+  align-items: center;      
+  padding: 30px 40px;     
+  
+ 
+}      
+
+.secao-saldo, .secao-ganhos, .secao-apostas {      
+  flex: 1;      
+  padding: 30px;      
+  text-align: center;      
+  border-radius:10px;    
+  margin-left: 15px;
+  margin-top:10px;
+}      
+
+.secao-saldo { 
+  background-image: url("https://res.cloudinary.com/dptprh0xk/image/upload/v1763614144/Pngtree_button_button_colorful__3911001_xudrfv.png");
+  background-size: cover;      
+  color: green;    
+  font-weight: bold;
+        
+}      
+
+.secao-ganhos {      
+  background-image: url("https://res.cloudinary.com/dptprh0xk/image/upload/v1763614144/Pngtree_button_button_colorful__3911001_xudrfv.png"); 
+  background-size: cover;        
+  color: gold;      
+  font-weight: bold;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);      
+}   
+
+
+.secao-apostas {      
+  background-image: url("https://res.cloudinary.com/dptprh0xk/image/upload/v1763614144/Pngtree_button_button_colorful__3911001_xudrfv.png");    
+  color: red;     
+  font-weight: bold; 
+  background-size: cover;        
+
+}      
+
+.titulo-saldo, .titulo-ganhos, .titulo-apostas {      
+  display: block;      
+  font-size: 1em;      
+  opacity: 0.8;      
+  margin-bottom: 5px;      
+}      
+
+.valor-saldo, .valor-ganhos, .valor-apostas {      
+  display: block;      
+  font-size: 1.5em;      
+  font-weight: bold;      
+}      
+
+#controls1 {      
+  position: fixed;      
+  bottom: 0;      
+  left: 0;      
+  width: 100vw;    
+  border:8px solid blue;  
+  border-radius: 20px;
+  /* background-color: rgba(255, 255, 255, 0.9);       */
+  background-image: url("https://res.cloudinary.com/dptprh0xk/image/upload/v1763835622/Screenshot_20251122-145213_Firefox_aoogqt.jpg");
+  background-size: cover;
+  height: auto;      
+  display: flex;      
+  justify-content: center;      
+  align-items: center;      
+  padding: 10px 30px;      
+  gap: 30px;      
+}      
+
+#controls1 label input {      
+  margin-right: 5px;      
+}      
+
+#betBtn {      
+  width: 120px;      
+  height: 120px;      
+  background-image:url("https://png.pngtree.com/element_our/20190523/ourmid/pngtree-purple-metal-spin-button-image_1089371.jpg");      
+  background-size: cover;
+  border: none;      
+  border-radius: 50%;      
+  font-size: 28px;      
+}      
+
+
+
+#betBox {      
+  display: none;      
+  background: #fff;      
+  border-radius: 8px;      
+  padding: 20px;      
+  border: 2px solid #000;      
+  position: fixed;      
+  bottom: 90px;      
+  width: 300px;      
+  left: calc(50% - 150px);      
+  text-align: center;    
+  z-index:9999;  
+}      
+
+.betControls {      
+  display: flex;      
+  justify-content: space-between;      
+  margin-top: 15px;      
+}      
+
+  
+
+#betValue {      
+  font-size: 36px;      
+  font-weight: bold;      
+}      
+
+#spin {      
+  width: 200px;      
+  height: 200px;      
+  border-radius: 50%;      
+  background-image:url("https://img.lovepik.com/png/20231014/Round-gilt-red-background-frame-festival-golden-auspicious_200153_wh1200.png");
+  background-size: cover;  
+  border: none; /* Remove a borda padrão */
+  cursor: pointer; /* Muda o cursor para apontar */
+  animation: animate var(--duracao) linear infinite;
+  opacity: 0.3; 
+      
+}   
+
+
+
+input[type="checkbox"] {     
+  display:none; 
+  width: 40px;      
+  height: 40px;      
+  border-radius:50%;      
+  background: blue;      
+}      
+
+.input {      
+  width: 120px;     
+  display:none; 
+  height: 120px;      
+  border-radius:50%;      
+  background: red;      
+}   
+
+
+
+.grid-container {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  z-index:100;
+  position:relative;
+}
+
+.grid-container.visible {
+  display: grid;
+}
+
+.grid-item {
+  background-color: #e9e9e9;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+   
+
+#jackpot img {      
+  max-width: 100px;      
+  height: auto;      
+  margin-bottom: 10px;    
+    
+}      
+
+.slogan {      
+  font-size: 32px;      
+  color: gold;      
+  margin: 0;      
+}      
+
+#jackpot {      
+  color: #d5ad6d;      
+  font-size: 40px;      
+  text-align: center;      
+}      
+
+#slotCanvas {      
+  position:relative;
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPaKCgVHiRHV2XaIIBQlfLGVKLDP2JSKZeJdVPNJ2RA&s=10");      */
+  /* background-size: cover;    */
+  background:#000;
+  scale:80%;      
+  height: 100%;      
+  border:5px solid purple;    
+  border-radius: 20px;
+  animation: piscar3 1s infinite alternate; 
+
+}    
+
+
+#slotCanvas.inverted .reel {      
+  transform: scaleY(-1);    
+  border: 10px solid blue;  
+}      
+
+#slotCanvas.inverted .reel > .icons > img {      
+  transform: scaleY(-1);  
+  border: 10px solid blue;    
+}      
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes background-glitch {
+  0%, 100% {
+    background-image: url("https://res.cloudinary.com/dptprh0xk/image/upload/v1762733060/estilo-de-vida-fotorrealista-cassino_hny2za.jpg");
+    opacity: 1;
+  }
+  25% {
+    background-image: url("https://res.cloudinary.com/dptprh0xk/image/upload/v1762733060/estilo-de-vida-fotorrealista-cassino_hny2za.jpg");
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+  50% {
+    background-image: url("https://res.cloudinary.com/dptprh0xk/image/upload/v1762733060/estilo-de-vida-fotorrealista-cassino_hny2za.jpg");
+    opacity: 0.5;
+  }
+  75% {
+    background-image: url("https://res.cloudinary.com/dptprh0xk/image/upload/v1762733060/estilo-de-vida-fotorrealista-cassino_hny2za.jpg");
+    opacity: 1;
+    transform: scale(0.98);
+  }
+}
+
+
+
+@keyframes piscar {    
+  0% { border-color: #000; }    
+  100% { border-color: #ff0000; }    
+}
+
+@keyframes piscar1 {    
+  0% { border-color: purple; }    
+  100% { border-color: orage; }    
+}
+
+@keyframes piscar2 {    
+  0% { border-color: blue; }    
+  100% { border-color: red; }    
+}
+
+@keyframes piscar3 {    
+  0% { border-color: gold; }    
+  100% { border-color: green; }    
+}
+
+
+
+
+
+
