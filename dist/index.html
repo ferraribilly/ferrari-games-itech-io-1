@@ -1,0 +1,11 @@
+<!doctype html><html><head><title>Slot Machine</title><meta http-equiv="ScreenOrientation" content="autoRotate:disabled"><link rel="stylesheet" href="https://unpkg.com/bootstrap@5.2.3/dist/css/bootstrap-reboot.min.css"/><link rel="stylesheet" href="style.css"><script defer="defer" src="bundle.916264408c3aa460a17c.js"></script><link href="main.3d885eaa55a1aaea2193.css" rel="stylesheet"></head><body><input type="checkbox" id="menu-toggle"> <label for="menu-toggle" style="position:fixed;top:20px;left:20px;z-index:999999;"><div class="hamburguer"></div></label><nav><ul id="menu-list"><li><a href="#">Home</a></li><li><a href="#">Sobre</a></li><li><a href="#">Movimentações</a></li></ul></nav><div id="slotCanvas"><div id="jackpot"><h1 class="slogan">Ferrari Games Itech.Io</h1></div><div id="linesLayer"></div><div id="reels"><div class="reel"></div><div class="reel"></div><div class="reel"></div><div class="reel"></div><div class="reel"></div></div><div id="controls"><div class="secao-saldo"><span class="titulo-saldo">Saldo</span> <span class="valor-saldo" id="balance">R$</span></div><div class="secao-apostas"><span class="titulo-apostas">Apostas</span> <span class="valor-apostas" id="betValue">R$</span></div><div class="secao-ganhos"><span class="titulo-ganhos">Ganhos🪙</span> <span class="valor-ganhos" id="win">R$</span></div></div><div id="spin-control"><div class="turbo"><button onclick="toggleGrid()"></button></div><div class="betminus"><button onclick="betMinus()"></button></div><button type="button" id="spin">SPIN</button><div class="betplus"><button onclick="betPlus()"></button></div><div class="auto"><button onclick="autoplay()"></button></div></div></div><script>// Seleciona o botão do menu e a lista de links
+const menuToggle = document.getElementById('menu-toggle');
+const menuList = document.getElementById('menu-list');
+
+// Adiciona um ouvinte de evento de clique ao botão
+menuToggle.addEventListener('click', function() {
+    // Alterna a classe 'active' na lista de links para mostrá-la/escondê-la
+    menuList.classList.toggle('active');
+    // Alterna a classe 'change' no botão para animar o ícone (X)
+    menuToggle.classList.toggle('change');
+});</script></body></html>
