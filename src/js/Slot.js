@@ -67,7 +67,7 @@ export default class Slot {
 
   async init() {
     try {
-      const resp = await fetch("http://192.168.18.66:5000/rodar", {
+      const resp = await fetch("https://ferrari-games-itech-io.onrender.com/rodar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ bet: this.betValue })
@@ -117,7 +117,7 @@ export default class Slot {
     `;
     document.body.appendChild(msg);
     document.getElementById("deposit-btn").addEventListener("click", () => {
-      window.location.href = "http://192.168.18.66:5000/compras/users/<string:user_id> ";
+      window.location.href = "https://ferrari-games-itech-io.onrender.com/compras/users/<string:user_id> ";
       
       
     });
@@ -129,7 +129,7 @@ export default class Slot {
 
     let backend;
     try {
-      const resp = await fetch("http://192.168.18.66:5000/rodar", {
+      const resp = await fetch("https://ferrari-games-itech-io.onrender.com/rodar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ bet: this.betValue })
