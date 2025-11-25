@@ -117,7 +117,7 @@ export default class Slot {
     `;
     document.body.appendChild(msg);
     document.getElementById("deposit-btn").addEventListener("click", () => {
-      window.location.href = "https://ferrari-games-itech-io.onrender.com/compras/users/<string:user_id> ";
+      window.location.href = "https://ferrari-games-itech-io.onrender.com/compras/users ";
       
       
     });
